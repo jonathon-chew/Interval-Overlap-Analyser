@@ -1,5 +1,7 @@
 # Interval-Overlap-Analyser
 
+![Interval-Overlap-Analyser banner](./assets/logo.png)
+
 ## Summary
 
 `Interval-Overlap-Analyser` is a range-analysis CLI for finding collisions, gaps, and merge opportunities across time windows such as meetings, maintenance periods, or booking slots. It makes interval algorithms concrete by giving them an obvious real-world use.
