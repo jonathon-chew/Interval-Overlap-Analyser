@@ -13,12 +13,12 @@ This project is meant to teach:
 - gap discovery and free-slot calculation,
 - how input shape affects algorithm choice and edge cases.
 
-## Planned Capabilities
+## Current Capabilities
 
-- Read intervals from CSV, JSON, or simple text input.
-- Detect overlaps and report conflicting ranges clearly.
-- Merge intersecting ranges into compact summaries.
-- Find gaps or available windows between busy periods.
+- Read job lifecycle data from CSV.
+- Group jobs whose `Start Time` falls within one minute of a window anchor.
+- Build snapshots of jobs that have started but not yet dispatched.
+- Exercise the parsing and grouping logic against large synthetic CSV datasets.
 
 ## Architecture Sketch
 
@@ -36,15 +36,17 @@ This project is meant to teach:
 
 ## Current Status
 
-This project is currently scaffolded but not implemented. The folder layout is ready, but the parsing, validation, and interval-analysis logic still need to be built.
+This project is an in-progress learning prototype rather than a finished CLI. The CSV parsing layer is implemented, there is active work on minute-based grouping and "started but not dispatched" windowing, and the repository includes synthetic datasets for stress-testing those ideas. The command-line interface is still minimal and the output is still debug-oriented.
 
 ## Development Notes
 
-Planned commands once implementation begins:
+Useful commands during development:
 
 - `go run ./cmd/Interval-Overlap-Analyser`
 - `go build ./cmd/Interval-Overlap-Analyser`
 - `go test ./...`
+
+The current CLI entrypoint reads from `./testdata/fake_jobs.csv` by default.
 
 ## Project Structure
 
@@ -54,4 +56,5 @@ internal/                       parsing, sorting, and overlap internals
 pkg/                            optional reusable interval packages
 doc/                            format notes and algorithm sketches
 scripts/                        helper scripts
+testdata/                       synthetic CSV datasets for local testing
 ```
