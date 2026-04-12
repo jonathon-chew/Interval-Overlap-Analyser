@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"Interval-Overlap-Analyser/internal/cli"
+	"github.com/jonathon-chew/Interval-Overlap-Analyser/internal/cli"
 )
 
 func main() {

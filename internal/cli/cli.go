@@ -1,6 +1,6 @@
 package cli
 
-import "Interval-Overlap-Analyser/internal/parse"
+import "github.com/jonathon-chew/Interval-Overlap-Analyser/internal/parse"
 
 type Flags struct{}
 
